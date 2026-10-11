@@ -1,0 +1,11 @@
+.env
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+**/field_log.csv
+raw/
+out/
+*.gpkg
+secret_salt.txt
+review/
+__pycache__/
+*.pyc
