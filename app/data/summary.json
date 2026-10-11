@@ -1,0 +1,19 @@
+{
+ "listings_total": 1626,
+ "entire_homes": 1233,
+ "in_scope_listings": 1376,
+ "entire_homes_matched_register": 914,
+ "entire_homes_no_valid_code": 196,
+ "entire_homes_seasonal_claim": 85,
+ "entire_homes_naive_exact_match": 843,
+ "register_units_donostia": 1322,
+ "city_census_units": 1488,
+ "expected_unregistered_total": 344.9,
+ "ai_text_read_listings": 413,
+ "ai_text_hotel_like_excluded": 41,
+ "ai_text_midterm_claims": 66,
+ "midterm_claim_but_short_stays": 34,
+ "snapshot_listings": "2026-09-25 (scraped 28-29 Sep 2026)",
+ "snapshot_register": "2026-10-06",
+ "snapshot_city_census": "2026-10-04"
+}

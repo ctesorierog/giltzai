@@ -1,0 +1,390 @@
+{
+ "model_used": "logreg (LOO-validated) blended with prior, weight 0.35",
+ "runs": 1000,
+ "jitter_m": 150,
+ "in_scope_listings": 1376,
+ "expected_unregistered_total": 344.9,
+ "total_p10_p90": [
+  330.0,
+  360.0
+ ],
+ "benchmark": {
+  "label_corrections": 2,
+  "labels_file": "GiltzAI_labels_80_v2.xlsx",
+  "labelled_rows": 90,
+  "rows_by_who": {
+   "auto": 46,
+   "human": 44
+  },
+  "unlabelled_rows": 0,
+  "self_agreement": "6/6 (repeated rows labelled by hand)",
+  "labels": {
+   "unclear": 28,
+   "not_found": 26,
+   "registered": 26
+  },
+  "labels_human_only": {
+   "not_found": 26,
+   "unclear": 9,
+   "registered": 3
+  },
+  "n_eval": 52,
+  "n_not_found": 26,
+  "baseline_exact_field": {
+   "precision": 0.893,
+   "recall": 0.962,
+   "f1": 0.926,
+   "accuracy": 0.923,
+   "tp": 25,
+   "fp": 3,
+   "fn": 1,
+   "tn": 23
+  },
+  "ai_prior_rules": {
+   "precision": 1.0,
+   "recall": 0.846,
+   "f1": 0.917,
+   "accuracy": 0.923,
+   "tp": 22,
+   "fp": 0,
+   "fn": 4,
+   "tn": 26
+  },
+  "human_labelled_only": {
+   "n": 29,
+   "n_not_found": 26,
+   "baseline_exact_field": {
+    "precision": 1.0,
+    "recall": 0.962,
+    "f1": 0.98,
+    "accuracy": 0.966,
+    "tp": 25,
+    "fp": 0,
+    "fn": 1,
+    "tn": 3
+   },
+   "ai_prior_rules": {
+    "precision": 1.0,
+    "recall": 0.846,
+    "f1": 0.917,
+    "accuracy": 0.862,
+    "tp": 22,
+    "fp": 0,
+    "fn": 4,
+    "tn": 3
+   }
+  },
+  "ai_logreg_loo": {
+   "precision": 1.0,
+   "recall": 0.962,
+   "f1": 0.98,
+   "accuracy": 0.981,
+   "tp": 25,
+   "fp": 0,
+   "fn": 1,
+   "tn": 26
+  },
+  "logreg_coefficients": {
+   "entire_home": -0.125,
+   "has_code": -0.875,
+   "code_in_register": -1.758,
+   "seasonal_claim": 0.179,
+   "code_not_in_register": 0.705,
+   "no_code": 0.875,
+   "code_from_text_only": -0.066,
+   "code_nonstandard_format": -0.234,
+   "code_shared": 0.045,
+   "several_codes": 0.172,
+   "exact_far_or_size_mismatch": 0.301,
+   "active_ltm": -0.17,
+   "calendar_blocked": 0.036,
+   "host_5plus": -0.081,
+   "superhost": -0.429,
+   "new_listing": 0.612,
+   "seasonal_but_short_stays": 0.203,
+   "host_mid_4_10": 0.231,
+   "llm_midterm_claim": 0.059
+  },
+  "model_used": "logreg (LOO-validated) blended with prior, weight 0.35",
+  "zone_topk_vs_naive": {
+   "top1": {
+    "ai_found": 2,
+    "naive_found": 2,
+    "ai_listings_to_check": 604,
+    "naive_listings_to_check": 604
+   },
+   "top2": {
+    "ai_found": 5,
+    "naive_found": 5,
+    "ai_listings_to_check": 889,
+    "naive_listings_to_check": 889
+   },
+   "top3": {
+    "ai_found": 7,
+    "naive_found": 7,
+    "ai_listings_to_check": 981,
+    "naive_listings_to_check": 981
+   },
+   "top5": {
+    "ai_found": 15,
+    "naive_found": 15,
+    "ai_listings_to_check": 1121,
+    "naive_listings_to_check": 1157
+   }
+  },
+  "stability_top5": {
+   "seasonal_low_0.1": [
+    "ERDIALDEA",
+    "GROS",
+    "AMARABERRI",
+    "ANTIGUA",
+    "ATEGORRIETA - ULIA"
+   ],
+   "seasonal_mid_0.4": [
+    "ERDIALDEA",
+    "GROS",
+    "AMARABERRI",
+    "ANTIGUA",
+    "ATEGORRIETA - ULIA"
+   ],
+   "seasonal_high_0.7": [
+    "ERDIALDEA",
+    "GROS",
+    "AMARABERRI",
+    "ANTIGUA",
+    "ATEGORRIETA - ULIA"
+   ]
+  },
+  "stable_top3_all_weightings": true
+ },
+ "zones": [
+  {
+   "zone_name": "ERDIALDEA",
+   "expected_unregistered": 130.5,
+   "unreg_p10": 121.0,
+   "unreg_p90": 140.0,
+   "rank_ai": 1,
+   "rank_p10": 1.0,
+   "rank_p90": 1.0,
+   "rank_naive": 1,
+   "p_top3": 1.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "GROS",
+   "expected_unregistered": 77.2,
+   "unreg_p10": 70.0,
+   "unreg_p90": 84.0,
+   "rank_ai": 2,
+   "rank_p10": 2.0,
+   "rank_p90": 2.0,
+   "rank_naive": 2,
+   "p_top3": 1.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "AMARABERRI",
+   "expected_unregistered": 24.3,
+   "unreg_p10": 20.0,
+   "unreg_p90": 28.0,
+   "rank_ai": 3,
+   "rank_p10": 3.0,
+   "rank_p90": 6.0,
+   "rank_naive": 3,
+   "p_top3": 0.562,
+   "publishable": true
+  },
+  {
+   "zone_name": "ATEGORRIETA - ULIA",
+   "expected_unregistered": 22.4,
+   "unreg_p10": 19.0,
+   "unreg_p90": 26.0,
+   "rank_ai": 4,
+   "rank_p10": 3.0,
+   "rank_p90": 6.0,
+   "rank_naive": 6,
+   "p_top3": 0.177,
+   "publishable": true
+  },
+  {
+   "zone_name": "ANTIGUA",
+   "expected_unregistered": 21.7,
+   "unreg_p10": 18.0,
+   "unreg_p90": 25.0,
+   "rank_ai": 5,
+   "rank_p10": 3.0,
+   "rank_p90": 6.0,
+   "rank_naive": 3,
+   "p_top3": 0.158,
+   "publishable": true
+  },
+  {
+   "zone_name": "EGIA",
+   "expected_unregistered": 20.9,
+   "unreg_p10": 17.0,
+   "unreg_p90": 25.0,
+   "rank_ai": 6,
+   "rank_p10": 3.0,
+   "rank_p90": 6.0,
+   "rank_naive": 5,
+   "p_top3": 0.103,
+   "publishable": true
+  },
+  {
+   "zone_name": "AIETE",
+   "expected_unregistered": 10.1,
+   "unreg_p10": 7.0,
+   "unreg_p90": 14.0,
+   "rank_ai": 7,
+   "rank_p10": 7.0,
+   "rank_p90": 9.0,
+   "rank_naive": 8,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "IBAETA",
+   "expected_unregistered": 7.7,
+   "unreg_p10": 6.0,
+   "unreg_p90": 10.0,
+   "rank_ai": 8,
+   "rank_p10": 7.0,
+   "rank_p90": 10.0,
+   "rank_naive": 7,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "INTXAURRONDO",
+   "expected_unregistered": 5.8,
+   "unreg_p10": 4.0,
+   "unreg_p90": 8.0,
+   "rank_ai": 9,
+   "rank_p10": 8.0,
+   "rank_p90": 12.0,
+   "rank_naive": 10,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "IGELDO",
+   "expected_unregistered": 5.3,
+   "unreg_p10": 4.0,
+   "unreg_p90": 7.0,
+   "rank_ai": 10,
+   "rank_p10": 8.0,
+   "rank_p90": 12.0,
+   "rank_naive": 12,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "MIRAMON - ZORROAGA",
+   "expected_unregistered": 5.0,
+   "unreg_p10": 3.0,
+   "unreg_p90": 7.0,
+   "rank_ai": 11,
+   "rank_p10": 8.0,
+   "rank_p90": 13.0,
+   "rank_naive": 13,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "LOIOLA",
+   "expected_unregistered": 4.0,
+   "unreg_p10": 2.0,
+   "unreg_p90": 6.0,
+   "rank_ai": 12,
+   "rank_p10": 10.0,
+   "rank_p90": 14.0,
+   "rank_naive": 9,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "ALTZA",
+   "expected_unregistered": 3.2,
+   "unreg_p10": 2.0,
+   "unreg_p90": 4.0,
+   "rank_ai": 13,
+   "rank_p10": 11.0,
+   "rank_p90": 15.0,
+   "rank_naive": 14,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "A\u00d1ORGA",
+   "expected_unregistered": 3.0,
+   "unreg_p10": 1.0,
+   "unreg_p90": 5.0,
+   "rank_ai": 14,
+   "rank_p10": 10.0,
+   "rank_p90": 15.0,
+   "rank_naive": 15,
+   "p_top3": 0.0,
+   "publishable": false
+  },
+  {
+   "zone_name": "MIRAKRUZ - BIDEBIETA",
+   "expected_unregistered": 1.9,
+   "unreg_p10": 0.0,
+   "unreg_p90": 4.0,
+   "rank_ai": 15,
+   "rank_p10": 13.0,
+   "rank_p90": 16.0,
+   "rank_naive": 10,
+   "p_top3": 0.0,
+   "publishable": true
+  },
+  {
+   "zone_name": "ZUBIETA",
+   "expected_unregistered": 1.4,
+   "unreg_p10": 1.0,
+   "unreg_p90": 2.0,
+   "rank_ai": 16,
+   "rank_p10": 14.0,
+   "rank_p90": 17.0,
+   "rank_naive": 16,
+   "p_top3": 0.0,
+   "publishable": false
+  },
+  {
+   "zone_name": "MARTUTENE",
+   "expected_unregistered": 0.3,
+   "unreg_p10": 0.0,
+   "unreg_p90": 1.0,
+   "rank_ai": 17,
+   "rank_p10": 16.0,
+   "rank_p90": 19.0,
+   "rank_naive": 16,
+   "p_top3": 0.0,
+   "publishable": false
+  },
+  {
+   "zone_name": "OARAIN",
+   "expected_unregistered": 0.0,
+   "unreg_p10": 0.0,
+   "unreg_p90": 0.0,
+   "rank_ai": 18,
+   "rank_p10": 18.0,
+   "rank_p90": 18.0,
+   "rank_naive": 18,
+   "p_top3": 0.0,
+   "publishable": false
+  },
+  {
+   "zone_name": "LANDERBASO",
+   "expected_unregistered": 0.0,
+   "unreg_p10": 0.0,
+   "unreg_p90": 0.0,
+   "rank_ai": 18,
+   "rank_p10": 17.0,
+   "rank_p90": 19.0,
+   "rank_naive": 18,
+   "p_top3": 0.0,
+   "publishable": false
+  }
+ ]
+}
